@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="HTML 结构">
+        <menu>
+            <item android:id="@+id/snippet_html5" android:title="HTML5 模板"/>
+            <item android:id="@+id/snippet_div" android:title="Div 容器"/>
+            <item android:id="@+id/snippet_p" android:title="段落"/>
+            <item android:id="@+id/snippet_h1" android:title="标题 H1"/>
+            <item android:id="@+id/snippet_a" android:title="链接"/>
+            <item android:id="@+id/snippet_img" android:title="图片"/>
+            <item android:id="@+id/snippet_ul" android:title="无序列表"/>
+            <item android:id="@+id/snippet_table" android:title="表格"/>
+        </menu>
+    </item>
+    <item android:title="CSS 样式">
+        <menu>
+            <item android:id="@+id/snippet_style_tag" android:title="Style 标签"/>
+            <item android:id="@+id/snippet_flex" android:title="Flexbox 容器"/>
+            <item android:id="@+id/snippet_grid" android:title="Grid 容器"/>
+            <item android:id="@+id/snippet_button_style" android:title="按钮样式"/>
+        </menu>
+    </item>
+    <item android:title="JavaScript">
+        <menu>
+            <item android:id="@+id/snippet_script_tag" android:title="Script 标签"/>
+            <item android:id="@+id/snippet_function" android:title="函数"/>
+            <item android:id="@+id/snippet_console" android:title="Console.log"/>
+        </menu>
+    </item>
+</menu>

@@ -1,0 +1,113 @@
+a|超链接标签|<a href="" target="">链接</a>
+abbr|缩写标签|<abbr title="">缩写</abbr>
+address|地址标签|<address>地址内容</address>
+area|区域标签|<area shape="" coords="" href="">
+article|文章标签|<article>文章内容</article>
+aside|侧边栏标签|<aside>侧边内容</aside>
+audio|音频标签|<audio src="" controls>音频</audio>
+b|粗体标签|<b>粗体文本</b>
+base|基础标签|<base href="">
+bdi|双向隔离标签|<bdi>文本</bdi>
+bdo|双向覆盖标签|<bdo dir="">文本</bdo>
+blockquote|引用标签|<blockquote>引用内容</blockquote>
+body|主体标签|<body>页面内容</body>
+br|换行标签|<br>
+button|按钮标签|<button type="">按钮</button>
+canvas|画布标签|<canvas id=""></canvas>
+caption|表格标题|<caption>标题</caption>
+cite|引用标题|<cite>引用</cite>
+code|代码标签|<code>代码</code>
+col|表格列|<col span="">
+colgroup|表格列组|<colgroup>列</colgroup>
+data|数据标签|<data value="">数据</data>
+datalist|数据列表|<datalist><option></datalist>
+dd|定义描述|<dd>描述</dd>
+del|删除线|<del>删除文本</del>
+details|详情标签|<details><summary>标题</summary>内容</details>
+dfn|定义标签|<dfn>术语</dfn>
+dialog|对话框|<dialog open>内容</dialog>
+div|块级容器|<div class="">内容</div>
+dl|定义列表|<dl>列表</dl>
+dt|定义术语|<dt>术语</dt>
+em|强调标签|<em>强调文本</em>
+embed|嵌入标签|<embed src="">
+fieldset|字段集|<fieldset><legend>标题</legend></fieldset>
+figcaption|插图标题|<figcaption>标题</figcaption>
+figure|插图标签|<figure><img src="">标题</figure>
+footer|页脚标签|<footer>页脚内容</footer>
+form|表单标签|<form action="" method="">表单</form>
+h1|一级标题|<h1>标题</h1>
+h2|二级标题|<h2>标题</h2>
+h3|三级标题|<h3>标题</h3>
+h4|四级标题|<h4>标题</h4>
+h5|五级标题|<h5>标题</h5>
+h6|六级标题|<h6>标题</h6>
+head|头部标签|<head>头部内容</head>
+header|页头标签|<header>页头内容</header>
+hgroup|标题组|<hgroup>标题组</hgroup>
+hr|水平线|<hr>
+html|根标签|<html lang="zh-CN">内容</html>
+i|斜体标签|<i>斜体文本</i>
+iframe|内嵌框架|<iframe src="" frameborder="0"></iframe>
+img|图片标签|<img src="" alt="">
+input|输入框|<input type="" name="" placeholder="">
+ins|插入线|<ins>插入文本</ins>
+kbd|键盘输入|<kbd>键盘</kbd>
+label|标签|<label for="">标签</label>
+legend|字段集标题|<legend>标题</legend>
+li|列表项|<li>列表项</li>
+link|链接标签|<link rel="stylesheet" href="">
+main|主要内容|<main>主要内容</main>
+map|图像映射|<map name="">区域</map>
+mark|高亮标签|<mark>高亮文本</mark>
+menu|菜单标签|<menu>菜单</menu>
+meta|元数据|<meta charset="UTF-8">
+meter|度量标签|<meter value="" min="" max="">度量</meter>
+nav|导航标签|<nav>导航内容</nav>
+noscript|无脚本|<noscript>内容</noscript>
+object|对象标签|<object data="">对象</object>
+ol|有序列表|<ol><li>项</li></ol>
+optgroup|选项组|<optgroup label="组名"><option></optgroup>
+option|选项|<option value="">选项</option>
+output|输出标签|<output>输出</output>
+p|段落标签|<p>段落文本</p>
+param|参数标签|<param name="" value="">
+picture|图片容器|<picture><source><img></picture>
+pre|预格式化|<pre>预格式文本</pre>
+progress|进度条|<progress value="" max="">进度</progress>
+q|短引用|<q>引用文本</q>
+rp|注音括号|<rp>(</rp>
+rt|注音文本|<rt>注音</rt>
+ruby|注音标签|<ruby>汉字<rt>注音</rt></ruby>
+s|删除线|<s>删除文本</s>
+samp|样本输出|<samp>样本</samp>
+script|脚本标签|<script src=""></script>
+section|区块标签|<section>区块内容</section>
+select|下拉框|<select name=""><option></select>
+slot|插槽标签|<slot name="">默认内容</slot>
+small|小字标签|<small>小字文本</small>
+source|媒体源|<source src="" type="">
+span|行内容器|<span class="">文本</span>
+strong|重要文本|<strong>重要文本</strong>
+style|样式标签|<style>CSS样式</style>
+sub|下标|<sub>下标</sub>
+summary|摘要标签|<summary>摘要</summary>
+sup|上标|<sup>上标</sup>
+svg|矢量图|<svg width="" height=""></svg>
+table|表格标签|<table><tr><td>单元格</td></tr></table>
+tbody|表格主体|<tbody>行</tbody>
+td|表格单元格|<td>单元格</td>
+template|模板标签|<template>模板内容</template>
+textarea|文本域|<textarea rows="" cols="">内容</textarea>
+tfoot|表格脚|<tfoot>行</tfoot>
+th|表头单元格|<th>表头</th>
+thead|表格头|<thead>行</thead>
+time|时间标签|<time datetime="">时间</time>
+title|标题标签|<title>页面标题</title>
+tr|表格行|<tr>单元格</tr>
+track|字幕轨道|<track src="" kind="subtitles">
+u|下划线|<u>下划线文本</u>
+ul|无序列表|<ul><li>项</li></ul>
+var|变量标签|<var>变量</var>
+video|视频标签|<video src="" controls>视频</video>
+wbr|换行机会|<wbr>

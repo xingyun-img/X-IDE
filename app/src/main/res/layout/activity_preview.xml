@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1E1E1E">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        
+        <!-- 顶部标题栏 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:background="#2D2D2D"
+            android:gravity="center_vertical"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp">
+            
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_arrow_back"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:padding="8dp"
+                android:contentDescription="返回"/>
+            
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="预览"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:paddingLeft="8dp"
+                android:singleLine="true"
+                android:ellipsize="end"/>
+            
+            <ImageButton
+                android:id="@+id/btnRefresh"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_refresh"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:padding="8dp"
+                android:contentDescription="刷新"
+                android:tint="#FFFFFF"/>
+        </LinearLayout>
+        
+        <!-- WebView 预览 -->
+        <WebView
+            android:id="@+id/previewWebView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#FFFFFF"/>
+        
+        <!-- 调试面板 -->
+        <LinearLayout
+            android:id="@+id/debugPanel"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="#1A1A1A"
+            android:visibility="gone">
+            
+            <!-- 调试标签栏 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:orientation="horizontal"
+                android:background="#252525">
+                
+                <Button
+                    android:id="@+id/btnLogTab"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="日志"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#4CAF50"/>
+                    
+                <Button
+                    android:id="@+id/btnNetworkTab"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="网络"
+                    android:textColor="#999999"
+                    android:textSize="12sp"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#333333"/>
+                    
+                <Button
+                    android:id="@+id/btnConsoleTab"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="控制台"
+                    android:textColor="#999999"
+                    android:textSize="12sp"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#333333"/>
+            </LinearLayout>
+            
+            <!-- 日志子标签栏 -->
+            <LinearLayout
+                android:id="@+id/logFilterBar"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal"
+                android:background="#1E1E1E"
+                android:visibility="visible">
+                
+                <Button
+                    android:id="@+id/btnLogAll"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="全部"
+                    android:textColor="#FFFFFF"
+                    android:textSize="10sp"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#4CAF50"/>
+                    
+                <Button
+                    android:id="@+id/btnLogInfo"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="信息"
+                    android:textColor="#2196F3"
+                    android:textSize="10sp"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#333333"/>
+                    
+                <Button
+                    android:id="@+id/btnLogWarn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="警告"
+                    android:textColor="#FF9800"
+                    android:textSize="10sp"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#333333"/>
+                    
+                <Button
+                    android:id="@+id/btnLogError"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="错误"
+                    android:textColor="#F44336"
+                    android:textSize="10sp"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#333333"/>
+            </LinearLayout>
+            
+            <!-- 网络列表头 -->
+            <LinearLayout
+                android:id="@+id/networkHeader"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:orientation="horizontal"
+                android:background="#252525"
+                android:visibility="gone"
+                android:gravity="center_vertical"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp">
+                
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="名称"
+                    android:textColor="#888888"
+                    android:textSize="10sp"
+                    android:singleLine="true"/>
+                    
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="方法"
+                    android:textColor="#888888"
+                    android:textSize="10sp"
+                    android:gravity="center"/>
+                    
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="状态"
+                    android:textColor="#888888"
+                    android:textSize="10sp"
+                    android:gravity="center"/>
+                    
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="类型"
+                    android:textColor="#888888"
+                    android:textSize="10sp"
+                    android:gravity="center"/>
+                    
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="大小"
+                    android:textColor="#888888"
+                    android:textSize="10sp"
+                    android:gravity="center"/>
+                    
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="时间"
+                    android:textColor="#888888"
+                    android:textSize="10sp"
+                    android:gravity="center"/>
+            </LinearLayout>
+            
+            <!-- 内容区域 -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+                
+                <!-- 日志列表 -->
+                <ListView
+                    android:id="@+id/logListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="#2A2A2A"
+                    android:dividerHeight="1dp"
+                    android:background="#1A1A1A"
+                    android:visibility="visible"/>
+                
+                <!-- 网络列表 -->
+                <ListView
+                    android:id="@+id/networkListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="#2A2A2A"
+                    android:dividerHeight="1dp"
+                    android:background="#1A1A1A"
+                    android:visibility="gone"/>
+                
+                <!-- 控制台面板 -->
+                <LinearLayout
+                    android:id="@+id/consolePanel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+                    
+                    <!-- 控制台输出 -->
+                    <ListView
+                        android:id="@+id/consoleOutputList"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:divider="#2A2A2A"
+                        android:dividerHeight="1dp"
+                        android:background="#1A1A1A"/>
+                    
+                    <!-- 控制台输入区域 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="#252525"
+                        android:padding="4dp"
+                        android:gravity="center_vertical">
+                        
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=">"
+                            android:textColor="#4CAF50"
+                            android:textSize="16sp"
+                            android:padding="4dp"/>
+                        
+                        <EditText
+                            android:id="@+id/consoleInput"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:textColor="#FFFFFF"
+                            android:textColorHint="#666666"
+                            android:textSize="13sp"
+                            android:typeface="monospace"
+                            android:hint="输入 JavaScript 代码..."
+                            android:padding="4dp"
+                            android:singleLine="true"
+                            android:imeOptions="actionGo"
+                            android:inputType="text"/>
+                        
+                        <Button
+                            android:id="@+id/btnExecute"
+                            android:layout_width="wrap_content"
+                            android:layout_height="28dp"
+                            android:text="执行"
+                            android:textColor="#FFFFFF"
+                            android:textSize="11sp"
+                            android:textAllCaps="false"
+                            android:backgroundTint="#4CAF50"
+                            android:paddingLeft="12dp"
+                            android:paddingRight="12dp"
+                            android:minWidth="0dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+            
+            <!-- 调试面板底部 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:orientation="horizontal"
+                android:background="#252525"
+                android:gravity="center_vertical"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp">
+                
+                <TextView
+                    android:id="@+id/debugStatusText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="就绪"
+                    android:textColor="#888888"
+                    android:textSize="10sp"/>
+                    
+                <Button
+                    android:id="@+id/btnClearDebug"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:text="清除"
+                    android:textColor="#FF9800"
+                    android:textSize="10sp"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#333333"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:minWidth="0dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    
+    <!-- 悬浮调试按钮 -->
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp">
+        
+        <ImageButton
+            android:id="@+id/btnDebug"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@drawable/ic_bug"
+            android:background="@drawable/fab_circle"
+            android:padding="14dp"
+            android:elevation="8dp"
+            android:contentDescription="调试"/>
+    </FrameLayout>
+</FrameLayout>

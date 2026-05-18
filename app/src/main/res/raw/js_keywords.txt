@@ -1,0 +1,82 @@
+addEventListener|添加事件监听|element.addEventListener('click', handler)
+alert|弹窗提示|alert('提示信息')
+Array|数组对象|new Array() 或 [1, 2, 3]
+async|异步函数|async function name() {}
+await|等待异步|await promise
+break|跳出循环|break;
+case|分支条件|case value:
+catch|捕获异常|catch(error) {}
+class|类定义|class ClassName {}
+clearInterval|清除定时器|clearInterval(id)
+clearTimeout|清除延时器|clearTimeout(id)
+console.log|控制台日志|console.log('message')
+console.error|控制台错误|console.error('error')
+console.warn|控制台警告|console.warn('warning')
+const|常量声明|const name = value
+continue|继续循环|continue;
+createElement|创建元素|document.createElement('div')
+default|默认导出|export default value
+document|文档对象|document.querySelector()
+else|否则分支|else {}
+export|导出|export default value
+extends|继承|class Child extends Parent
+false|布尔假|false
+fetch|网络请求|fetch(url).then(res => res.json())
+filter|数组过滤|array.filter(item => condition)
+finally|最终执行|finally {}
+find|查找元素|array.find(item => condition)
+for|循环|for (let i = 0; i < 10; i++) {}
+forEach|遍历|array.forEach(item => {})
+from|导入来源|import x from 'module'
+function|函数|function name() {}
+getElementById|ID选择|document.getElementById('id')
+getElementsByClassName|类选择|document.getElementsByClassName('class')
+getElementsByTagName|标签选择|document.getElementsByTagName('div')
+if|条件判断|if (condition) {}
+import|导入|import name from 'module'
+includes|包含判断|array.includes(item)
+indexOf|索引查找|string.indexOf('text')
+innerHTML|内部HTML|element.innerHTML = '内容'
+instanceof|实例判断|obj instanceof Class
+JSON.parse|JSON解析|JSON.parse('{"key":"value"}')
+JSON.stringify|JSON序列化|JSON.stringify({key: 'value'})
+let|变量声明|let name = value
+localStorage|本地存储|localStorage.setItem('key', 'value')
+map|数组映射|array.map(item => item)
+Math|数学对象|Math.random()
+new|新建实例|new ClassName()
+null|空值|null
+Object|对象|new Object() 或 {}
+parseFloat|解析浮点|parseFloat('3.14')
+parseInt|解析整数|parseInt('123')
+Promise|承诺对象|new Promise((resolve, reject) => {})
+push|数组追加|array.push(item)
+querySelector|查询选择器|document.querySelector('.class')
+querySelectorAll|查询所有|document.querySelectorAll('.class')
+reduce|数组归并|array.reduce((a, b) => a + b, 0)
+removeEventListener|移除监听|element.removeEventListener('click', handler)
+return|返回值|return value;
+sessionStorage|会话存储|sessionStorage.setItem('key', 'value')
+setInterval|定时器|setInterval(() => {}, 1000)
+setTimeout|延时器|setTimeout(() => {}, 1000)
+slice|切片|array.slice(0, 3)
+sort|排序|array.sort((a, b) => a - b)
+splice|剪接|array.splice(0, 1)
+split|分割|string.split(',')
+startsWith|开头判断|string.startsWith('text')
+String|字符串对象|new String('text')
+super|父类引用|super.method()
+switch|开关语句|switch(value) { case 0: break; }
+textContent|文本内容|element.textContent = '文本'
+this|当前对象|this.property
+throw|抛出异常|throw new Error('message')
+toLowerCase|转小写|string.toLowerCase()
+toString|转字符串|value.toString()
+toUpperCase|转大写|string.toUpperCase()
+trim|去空格|string.trim()
+true|布尔真|true
+try|尝试执行|try {}
+typeof|类型判断|typeof value
+undefined|未定义|undefined
+var|变量声明|var name = value
+while|循环|while (condition) {}

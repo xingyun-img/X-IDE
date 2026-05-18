@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#1E1E1E">
+
+    <!-- 顶部标题栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:gravity="center_vertical"
+        android:background="#2D2D2D">
+        
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="X IDE - HTML Editor"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:padding="8dp"/>
+            
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNewProject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="新建项目"
+            android:textSize="12sp"
+            android:textAllCaps="false"
+            app:backgroundTint="#4CAF50"
+            android:layout_margin="2dp"
+            android:padding="4dp"/>
+            
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnOpenProject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="打开项目"
+            android:textSize="12sp"
+            android:textAllCaps="false"
+            app:backgroundTint="#2196F3"
+            android:layout_margin="2dp"
+            android:padding="4dp"/>
+    </LinearLayout>
+
+    <!-- Tab 切换 -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2D2D2D"
+        app:tabTextColor="#999999"
+        app:tabSelectedTextColor="#FFFFFF"
+        app:tabIndicatorColor="#4CAF50"
+        app:tabIndicatorHeight="3dp">
+        
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="编辑器"/>
+            
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="预览"/>
+    </com.google.android.material.tabs.TabLayout>
+
+    <!-- 编辑区域 -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp">
+        
+        <!-- 代码编辑器 -->
+        <EditText
+            android:id="@+id/htmlEditor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#252525"
+            android:textColor="#D4D4D4"
+            android:textColorHint="#808080"
+            android:textSize="14sp"
+            android:typeface="monospace"
+            android:gravity="top|start"
+            android:padding="12dp"
+            android:scrollbars="vertical"
+            android:inputType="textMultiLine|textNoSuggestions"
+            android:hint="Enter your HTML code here..."/>
+        
+        <!-- 预览 WebView -->
+        <WebView
+            android:id="@+id/previewWebView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:background="#FFFFFF"/>
+    </FrameLayout>
+
+    <!-- 底部工具栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:background="#2D2D2D"
+        android:gravity="center">
+        
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPreview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="预览"
+            android:textAllCaps="false"
+            app:backgroundTint="#607D8B"
+            android:layout_margin="4dp"/>
+            
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRun"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="运行"
+            android:textAllCaps="false"
+            app:backgroundTint="#4CAF50"
+            android:layout_margin="4dp"/>
+            
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnClear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="清空"
+            android:textAllCaps="false"
+            app:backgroundTint="#FF9800"
+            android:layout_margin="4dp"/>
+            
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSave"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="保存"
+            android:textAllCaps="false"
+            app:backgroundTint="#9C27B0"
+            android:layout_margin="4dp"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:gravity="center_vertical">
+    
+    <TextView
+        android:id="@+id/networkUrl"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:text="url"
+        android:textColor="#9CDCFE"
+        android:textSize="11sp"
+        android:singleLine="true"
+        android:ellipsize="end"/>
+        
+    <TextView
+        android:id="@+id/networkMethod"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="GET"
+        android:textColor="#4CAF50"
+        android:textSize="10sp"
+        android:gravity="center"/>
+        
+    <TextView
+        android:id="@+id/networkStatus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="200"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        android:gravity="center"/>
+        
+    <TextView
+        android:id="@+id/networkType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="html"
+        android:textColor="#888888"
+        android:textSize="10sp"
+        android:gravity="center"/>
+        
+    <TextView
+        android:id="@+id/networkSize"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="1KB"
+        android:textColor="#888888"
+        android:textSize="10sp"
+        android:gravity="center"/>
+        
+    <TextView
+        android:id="@+id/networkTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="12ms"
+        android:textColor="#B5CEA8"
+        android:textSize="10sp"
+        android:gravity="center"/>
+</LinearLayout>
